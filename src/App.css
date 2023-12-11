@@ -1,0 +1,102 @@
+#root{
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+*{
+  margin:0;padding:0;font-size:12px;
+}
+.헤더{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  text-align:center;
+  background:green;
+  height:30px;
+}
+.헤더 h1{
+  font-size:16px;
+  color:#fff;
+  line-height:30px;
+}
+.헤더 button{
+  position:absolute;
+  left:0;
+  top:0;
+}
+.바디{
+  display:flex;
+  flex-direction: column;
+  flex: 1 auto;
+  padding:30px 0 0 0;
+}
+.채팅바디{
+  flex:1 auto;
+  display:flex;
+  flex-direction: column-reverse; /* 스크롤을 하단으로 고정시키기 위해서 이 방식 사용 */
+  /* flex-direction: column; 
+  justify-content: flex-end */
+  height:calc(100vh - 30px);
+  overflow:auto;
+}
+.채팅바디 > div{
+  flex:none;
+  opacity: 0;
+  overflow: hidden;
+  max-height:0;
+  transition: 2s;
+}
+.채팅바디 > div.active{
+  max-height:5999px;
+  opacity: 1;
+}
+.메세지{
+  padding:20px 10px;
+  border:1px solid #333;
+  margin:20px;
+}
+.왼쪽{
+  text-align:left;
+}
+.오른쪽{
+  text-align:right;
+}
+.바텀시트{
+  position:fixed;
+  bottom:0;
+  background:yellow;
+  width:100%;
+  text-align:center;
+}
+.바텀시트 h1{
+  font-size:14px;
+  padding:10px;
+  border-bottom:1px solid #333;
+}
+.바텀시트 li{
+  margin:5px;
+}
+.바텀시트 .확인{
+  width:100%;
+}
+.바텀시트 .강조 button{
+  font-weight:700;
+  color:red;
+}
+
+.컨트롤{
+  border:3px solid #333;
+  padding:3px;
+  position:fixed;
+  right:0;
+  top:0;
+  z-index:9999;
+  background:yellowgreen
+}
+.컨트롤 .타이틀{
+  font-weight:700;
+  text-align:center;
+  border-bottom:1px solid #333;
+}
+

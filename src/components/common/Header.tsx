@@ -3,7 +3,7 @@ import { 전역값, 프롭스 } from "../../context/globalContext"
 
 function Header() {
     const 값 = useContext<프롭스 | null>(전역값);
-    const 페이지변경 = (e:React.MouseEvent<HTMLButtonElement>) =>{
+    const 페이지변경 = () =>{
       값?.페이지설정(값?.페이지 > 0 ? 값?.페이지-1 : 0); 
     }
     return (

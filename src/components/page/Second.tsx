@@ -91,7 +91,7 @@ function Second() {
 
    const 초기화 = () =>{
     카드설정((이전값)=>{
-      const 업데이트값 = 이전값.map((아이템, 인덱스)=>{
+      const 업데이트값 = 이전값.map((아이템)=>{
         return {...아이템, 활성화: false, 노출여부: false};
       })
       위치설정(0)
